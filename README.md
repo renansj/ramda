@@ -1,7 +1,7 @@
 Ramda
 =============
 
-A practical functional library for JavaScript programmers.
+Uma biblioteca funcional prática para desenvolvedores JavaScript
 
 [![Build Status](https://travis-ci.org/ramda/ramda.svg?branch=master)](https://travis-ci.org/ramda/ramda)
 [![npm module](https://badge.fury.io/js/ramda.svg)](https://www.npmjs.org/package/ramda)
@@ -10,44 +10,38 @@ A practical functional library for JavaScript programmers.
 
 
 
-Why Ramda?
+Por que Ramda?
 ----------
 
 <img src="https://ramdajs.com/ramdaFilled_200x235.png" 
      width="170" height="190" align="right" hspace="12" />
 
-There are already several excellent libraries with a functional flavor. Typically, they are meant to be general-purpose toolkits, suitable for working in multiple paradigms. Ramda has a more focused goal. We wanted a library designed specifically for a functional programming style, one that makes it easy to create functional pipelines, one that never mutates user data. 
+Já existem várias bibliotecas funcionais excelentes, tipicamente, elas são supostamente feitas para ser um conjunto de ferramentas de general-purpose(propósitos gerais), adequadas para funcionarem em múltiplos paradigmas. Ramda tem um foco mais específico, nós queremos uma biblioteca projetada especificamente para o paradigma funcional, uma que deixa fácil criar pipelines funcionais, uma que nunca deixe os dados dos usuários mutáveis.
 
-
-
-What's Different?
+Qual a diferença?
 -----------------
 
-The primary distinguishing features of Ramda are:
+As características primárias que distinguem Ramda são:
 
-* Ramda emphasizes a purer functional style. Immutability and side-effect free functions 
-  are at the heart of its design philosophy. This can help you get the job done with simple, 
-  elegant code.
+* Ramda enfatiza um estilo funcional puro. A ausência de Imutabilidade e side-effect(efeitos colaterais) são o coração da filosofia do design. Isso pode ajudá-lo a fazer o seu trabalho com um código simples e elegante.
 
-* Ramda functions are automatically curried. This allows you to easily build up new functions 
-  from old ones simply by not supplying the final parameters.
+* As funções em Ramda são automaticamente curried(que é basicamente uma maneira de informar para a função os parâmetros de forma parcial, você pode injetar os parâmetros a medida que os mesmo ficarem disponíveis). Isso permite a você escrever novas funções a partir das antigas sem a necessidade de fornecer parâmetros finais.
 
-* The parameters to Ramda functions are arranged to make it convenient for currying. The data 
-  to be operated on is generally supplied last.
+* Os parâmetros para funções em Ramda são predispostos para fazê-los serem convenientes para o currying. Os dados a serem trabalhados geralmente são fornecidos por último. 
 
-The last two points together make it very easy to build functions as sequences of simpler functions, each of which transforms the data and passes it along to the next. Ramda is designed to support this style of coding.
+Os dois últimos pontos juntos deixam muito fácil criar funções como sequencias de funções mais simples, Cada um deles transforma os dados e passa ao próximo. Ramda é projetada para suportar esse estilo de código.
 
 
+Introdução
 
-Introductions
 -------------
 
-* [Introducing Ramda](http://buzzdecafe.github.io/code/2014/05/16/introducing-ramda) by Buzz de Cafe
-* [Why Ramda?](http://fr.umio.us/why-ramda/) by Scott Sauyet
-* [Favoring Curry](http://fr.umio.us/favoring-curry/) by Scott Sauyet
-* [Why Curry Helps](https://hughfdjackson.com/javascript/why-curry-helps/) by Hugh Jackson
-* [Hey Underscore, You're Doing It Wrong!](https://www.youtube.com/watch?v=m3svKOdZijA&app=desktop) by Brian Lonsdorf
-* [Thinking in Ramda](http://randycoulman.com/blog/categories/thinking-in-ramda) by Randy Coulman
+* [Introducing Ramda](http://buzzdecafe.github.io/code/2014/05/16/introducing-ramda) por Buzz de Cafe
+* [Why Ramda?](http://fr.umio.us/why-ramda/) por Scott Sauyet
+* [Favoring Curry](http://fr.umio.us/favoring-curry/) por Scott Sauyet
+* [Why Curry Helps](https://hughfdjackson.com/javascript/why-curry-helps/) por Hugh Jackson
+* [Hey Underscore, You're Doing It Wrong!](https://www.youtube.com/watch?v=m3svKOdZijA&app=desktop) por Brian Lonsdorf
+* [Thinking in Ramda](http://randycoulman.com/blog/categories/thinking-in-ramda) por Randy Coulman
 
 
 
