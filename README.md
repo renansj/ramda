@@ -118,7 +118,7 @@ Or melhor ainda, importe apenas as funções necessárias através de `import { 
 
 `npm run build` cria os diretórios `es`, `src` e atualiza __dist/ramda.js__ e __dist/ramda.min.js__
 
-### Partial Builds
+### Builds parciais
 
 É possível *buildar* Ramda como um *subset* da funcionalidade para reduzir o seu tamanho. O sistema de build de Ramda tem suporte para *flags* de linha de comando.
 Por exemplo, se você está usando `R.compose`, `R.reduce` e `R.filter` você pode criar *builds* parciais com:
@@ -164,11 +164,6 @@ Ou se você instalou as depedências pode ser através do:
 então você poderá rodar os testes (e ver os *output* detalhado) rodando:
 
     npm test
-
-
-
-Running The Test Suite
-----------------------
 
 **Browser:**
 
