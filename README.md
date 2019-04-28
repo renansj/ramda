@@ -44,66 +44,58 @@ Introdução
 * [Thinking in Ramda](http://randycoulman.com/blog/categories/thinking-in-ramda) por Randy Coulman
 
 
-
-Philosophy
+Filosofia
 ----------
-Using Ramda should feel much like just using JavaScript.
-It is practical, functional JavaScript. We're not introducing
-lambda expressions in strings, we're not borrowing consed 
-lists, we're not porting over all of the Clojure functions.
+Usar Ramda deveria ser como usar Javascript.
+É práticamente, Javascript funcional. Não iremos apresentar expressões lambdas em 
+Strings, não estamos pegando emprestadas *consed lists*, não estamos portando Clojures.
 
-Our basic data structures are plain JavaScript objects, and our
-usual collections are JavaScript arrays. We also keep other
-native features of JavaScript, such as functions as objects
-with properties.
+Nossas estruturas de dados báscias são objetos Javascript puros, a nossas *colletions* são arrays.
+Nós também mantemos outras features de Javascript, tais como funções como objetos com propriedades.
 
-Functional programming is in good part about immutable objects and 
-side-effect free functions. While Ramda does not *enforce* this, it
-enables such style to be as frictionless as possible.
+Programação funcional é boa parte sobre objetos imutáveis e funções livres de *side-effects*.
+Enquanto Ramda não impõe isso, te permite tal estilo sem o menor atrito possível.
 
-We aim for an implementation both clean and elegant, but the API is king.
-We sacrifice a great deal of implementation elegance for even a slightly
-cleaner API.
+Nós buscamos uma implementação tanto quanto elegante e limpa, mas a peça chave é a API.
+Nós sacrificamos uma grande parte da elegância da implementação por uma API um pouco mais limpa.
 
-Last but not least, Ramda strives for performance. A reliable and quick
-implementation wins over any notions of functional purity.
+Por último mas não menos importante, Ramda tem grande empenho em performance. Uma implementação 
+confiável e rápida supera qualquer noção de pureza funcional.
 
-
-
-Installation
+Instalação
 ------------
 
-To use with node:
+Para usar com node:
 
 ```bash
 $ npm install ramda
 ```
 
-Then in the console:
+Então no console:
 
 ```javascript
 const R = require('ramda');
 ```
 
-To use directly in the browser:
+Para usar diretamente no *browser*:
 
 ```html
 <script src="path/to/yourCopyOf/ramda.js"></script>
 ```
 
-or the minified version:
+Ou a versão minificada: 
 
 ```html
 <script src="path/to/yourCopyOf/ramda.min.js"></script>
 ```
 
-or from a CDN, either cdnjs:
+or através do CDN ou cdnjs:
 
 ```html
 <script src="//cdnjs.cloudflare.com/ajax/libs/ramda/0.25.0/ramda.min.js"></script>
 ```
 
-or one of the below links from [jsDelivr](http://jsdelivr.com):
+Ou um dos links abaixo através de [jsDelivr](http://jsdelivr.com):
 
 ```html
 <script src="//cdn.jsdelivr.net/npm/ramda@0.25.0/dist/ramda.min.js"></script>
@@ -111,87 +103,86 @@ or one of the below links from [jsDelivr](http://jsdelivr.com):
 <script src="//cdn.jsdelivr.net/npm/ramda@latest/dist/ramda.min.js"></script>
 ```
 
-(note that using `latest` is taking a significant risk that ramda API changes could break your code.)
+(Note que usando `latest` é levar em risco que a as mudanças da API ramda podem trazer *breaking changes*.)
 
-These script tags add the variable `R` on the browser's global scope.
+Essas tags adicionam a variável `R` no scopo global do navegador.
 
-Or you can inject ramda into virtually any unsuspecting website using [the bookmarklet](https://github.com/ramda/ramda/blob/master/BOOKMARKLET.md).
+Or você pode injetar ramda em praticamente qualquer website utilizando [the bookmarklet](https://github.com/ramda/ramda/blob/master/BOOKMARKLET.md).
 
-**Note for versions > 0.25**
-Ramda versions > 0.25 don't have a default export.
-So instead of `import R from 'ramda';`, one has to use `import * as R from 'ramda';`
-Or better yet, import only the required functions via `import { functionName } from 'ramda';`
+**Notas para as versões > 0.25**
+As versões de Ramda acima de 0.25 não tem *default export*.
+Então ao invés de usar `import R from 'ramda';`, terá que usar `import * as R from 'ramda';`
+Or melhor ainda, importe apenas as funções necessárias através de `import { functionName } from 'ramda';`
 
 ### Build
 
-`npm run build` creates `es`, `src` directories and updates both __dist/ramda.js__ and __dist/ramda.min.js__
+`npm run build` cria os diretórios `es`, `src` e atualiza __dist/ramda.js__ e __dist/ramda.min.js__
 
-#### Partial Builds
+### Partial Builds
 
-It is possible to build Ramda with a subset of the functionality to reduce its file size. Ramda's build system supports this with command line flags. For example if you're using `R.compose`, `R.reduce`, and `R.filter` you can create a partial build with:
+É possível *buildar* Ramda como um *subset* da funcionalidade para reduzir o seu tamanho. O sistema de build de Ramda tem suporte para *flags* de linha de comando.
+Por exemplo, se você está usando `R.compose`, `R.reduce` e `R.filter` você pode criar *builds* parciais com:
 
     npm run --silent partial-build compose reduce filter > dist/ramda.custom.js
 
-This requires having Node/io.js installed and ramda's dependencies installed (just use `npm install` before running partial build). 
+Para isso é necessário ter Node/io.js instalado e as dependências de Ramda (apenas use `npm install` antes de rodar sua build parcial)
 
 
-
-Documentation
+Documentação
 -------------
+Por favor, revise: [API documentation](https://ramdajs.com/docs/).
 
-Please review the [API documentation](https://ramdajs.com/docs/).
+Também disponível em nosso [Cookbook](https://github.com/ramda/ramda/wiki/Cookbook) de *built functions* de Ramda que você pode achar útil.
 
-Also available is our [Cookbook](https://github.com/ramda/ramda/wiki/Cookbook) of functions built from Ramda that you may find useful.
-
-
-The Name
+O nome
 --------
 
-Ok, so we like sheep.  That's all.  It's a short name, not already 
-taken.  It could as easily have been `eweda`, but then we would be 
-forced to say _eweda lamb!_, and no one wants that.  For non-English 
-speakers, lambs are baby sheep, ewes are female sheep, and rams are male 
-sheep.  So perhaps ramda is a grown-up lambda... but probably not.
+Ok, então nos gostamos de carneiros. Isso é tudo. É um nome curto e que ainda não tinha sido utilizado.
+Poderia facilmente ser `aweda`, mas nos seríamos forçados a dizer _eweda lamb!_, e ninguém quer isso.
+Para pessoas que não falam nativamente inglês, *lambs* são filhotes de carneiros, *ewes* são carneiros fêmeas e *rams* carneiros.
+Então talvez Ramda é uma lambda crescida... provavelmente não.
 
+(Ficou um pouco estranho, já que em português os nomes são diferentes `carneiros` e `ovelhas`, por isso essa parte ficou com os nomes em inglês).
+
+Rodando a suite de testes
+----------------------
+
+**Console:**
+
+Para rodar a suite de testes a partir do console, você precisar ter o `mocha` instalado:
+
+    npm install -g mocha
+
+Então a partir da raíz do projeto você precisa apenas rodar
+
+    mocha
+
+Ou se você instalou as depedências pode ser através do:
+
+    npm install
+
+então você poderá rodar os testes (e ver os *output* detalhado) rodando:
+
+    npm test
 
 
 
 Running The Test Suite
 ----------------------
 
-**Console:**
-
-To run the test suite from the console, you need to have `mocha` installed:
-
-    npm install -g mocha
-
-Then from the root of the project, you can just call
-
-    mocha
-
-Alternately, if you've installed the dependencies, via:
-
-    npm install
-
-then you can run the tests (and get detailed output) by running:
-
-    npm test
-
 **Browser:**
 
-You can use [testem](https://github.com/airportyh/testem) to
-test across different browsers (or even headlessly), with livereloading of
-tests. Install testem (`npm install -g testem`) and run `testem`. Open the
-link provided in your browser and you will see the results in your terminal.
+Você pode usar 
 
-If you have _PhantomJS_ installed, you can run `testem -l phantomjs` to run the
-tests completely headlessly.
+**Browser:** [testem](https://github.com/airportyh/testem) para testar para diferentes *browsers* (ou mesmo de forma *headlessly*), com *livereloading* dos testes. instale testem (`npm install -g testem`) e rode `testem`. Abra o link fornecido no seu browser e você verá 
+os resultados no seu terminal.
 
+Se você tiver _PhantomJS_ instalado, você poderá rodar `testem -l phantomjs` para rodar os testes de forma completamente *headlessly*
 
-Usage
+Forma de uso
 -----------------
 
-For `v0.25` and up, import the whole library or pick ES modules directly from the library:
+Para as versões acima de `v0.25`, importar a biblioteca inteira ou pegar os *modules* diretamente da biblioteca:
 
 ```js
 import * as R from 'ramda'
@@ -200,7 +191,7 @@ const {identity} = R
 R.map(identity, [1, 2, 3])
 ```
 
-Destructuring imports from ramda *does not necessarily prevent importing the entire library*. You can manually cherry-pick methods like the following, which would only grab the parts necessary for `identity` to work:
+A desestruturação dos imports do Ramda *não necessariamente impede a importação de toda a  biblioteca*. Você pode manualmente fazer um *cherry-pick* dos métodos como a seguir, irá apenas pegar as partes necessárias para `identity` funcionar:
 
 ```js
 import identity from 'ramda/src/identity'
@@ -208,7 +199,8 @@ import identity from 'ramda/src/identity'
 identity()
 ```
 
-Manually cherry picking methods is cumbersome, however. Most bundlers like Webpack and Rollup offer tree-shaking as a way to drop unused Ramda code and reduce bundle size, but their performance varies, discussed [here](https://github.com/scabbiaza/ramda-webpack-tree-shaking-examples). Here is a summary of the optimal setup based on what technology you are using:
+Fazer *cherry-pick* dos métodos é um pouco maçante, entretanto. A maioria dos *bundlers* como Webpack e Rollup oferecem *tree-shaking* como uma maneira de remover códigos não usados e diminuir o tamanho do bundle, mas a performance varia, discutido [Aqui](https://github.com/scabbiaza/ramda-webpack-tree-shaking-examples). 
+Aqui está um sumário da configuração ideal de acordo com a tecnologia que você está usando:
 
 1. Webpack + Babel - use [`babel-plugin-ramda`](https://github.com/megawac/babel-plugin-ramda) to automatically cherry pick methods. Discussion [here](http://www.andrewsouthpaw.com/2018/01/19/ramda-tree-shaking-not-supported-out-of-the-box/), example [here](https://github.com/AndrewSouthpaw/ramda-webpack-tree-shaking-examples/blob/master/07-webpack-babel-plugin-ramda/package.json)
 1. Webpack only - use `UglifyJS` plugin for treeshaking along with the `ModuleConcatenationPlugin`. Discussion [here](https://github.com/ramda/ramda/issues/2355), with an example setup [here](https://github.com/scabbiaza/ramda-webpack-tree-shaking-examples/blob/master/06-webpack-scope-hoisted/webpack.config.js)
@@ -229,7 +221,7 @@ Translations
 
 - [Chinese(中文)](http://ramda.cn/)
 - [Ukrainian(Українська)](https://github.com/ivanzusko/ramda)
-
+- [Portuguese(Português)](https://github.com/renansj/ramda)
 
 
 Acknowledgements
