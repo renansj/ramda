@@ -218,6 +218,7 @@ Translations
 - [Ukrainian(Українська)](https://github.com/ivanzusko/ramda)
 - [Portuguese(Português)](https://github.com/renansj/ramda)
 - [Russian(Русский)](https://github.com/Guck111/ramda)
+- [Spanish(ES)](https://github.com/wirecobweb/ramda)
 
 
 Acknowledgements
